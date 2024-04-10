@@ -57,13 +57,13 @@ export default function Dashboard() {
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
-                    stroke-width="3"
+                    strokeWidth="3"
                     class="h-6 w-6 text-blue-gray-500"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </span>
@@ -81,9 +81,9 @@ export default function Dashboard() {
                     class="h-5 w-5 text-blue-gray-500"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                  Log Out{" "}
@@ -101,9 +101,9 @@ export default function Dashboard() {
                       class="h-5 w-5 text-blue-gray-500"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </span>
@@ -122,9 +122,9 @@ export default function Dashboard() {
                     class="h-5 w-5 text-blue-gray-500"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </span>
@@ -145,9 +145,9 @@ export default function Dashboard() {
                     class="h-5 w-5 text-blue-gray-500"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     ></path>
                   </svg>
                 </span>
@@ -168,9 +168,9 @@ export default function Dashboard() {
                 >
                   <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"></path>
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 011.5 14.625v-9.75zM8.25 9.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM18.75 9a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V9.75a.75.75 0 00-.75-.75h-.008zM4.5 9.75A.75.75 0 015.25 9h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V9.75z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                   <path d="M2.25 18a.75.75 0 000 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 00-.75-.75H2.25z"></path>
                 </svg>
@@ -200,9 +200,9 @@ export default function Dashboard() {
                   class="w-6 h-6 text-white"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </div>
@@ -288,7 +288,7 @@ export default function Dashboard() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="3"
+                      strokeWidth="3"
                       stroke="currentColor"
                       aria-hidden="true"
                       class="h-4 w-4 text-blue-500"
@@ -314,7 +314,7 @@ export default function Dashboard() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currenColor"
                       viewBox="0 0 24 24"
-                      stroke-width="3"
+                      strokeWidth="3"
                       stroke="currentColor"
                       aria-hidden="true"
                       class="h-6 w-6"

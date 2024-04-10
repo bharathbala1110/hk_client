@@ -6,7 +6,7 @@ import { getAll } from "../../features/batch/batchSlice";
 
 export default function Batch() {
   const dispatch = useDispatch();
-  const { batchData } = useSelector((state) => state.batch);
+  const { batchData, isLoading } = useSelector((state) => state.batch);
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     dispatch(getAll());
@@ -19,11 +19,18 @@ export default function Batch() {
       order.status.toString().includes(searchTerm.toLowerCase()) ||
       order.display_batch_id.toLowerCase().includes(searchTerm)
   );
-
+  if(isLoading){
+    return(
+      <div class="flex justify-center items-center h-screen">
+      <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+    </div>
+    )
+  }
   return (
     <div className="animate-fadeIn p-2 ">
       <div className="min-w-full">
         <Header title={"Batch"} />
+        
         <div className="text-right  w-full">
           <input
             type="text"

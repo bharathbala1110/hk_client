@@ -44,11 +44,12 @@ export const purchaseSlice = createSlice({
 
 export const getAll = createAsyncThunk(
   "purchase/getAll",
-  async (user, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const responseData = await api.get("/purchase");
-      console.log(responseData);
-      return responseData.data;
+      console.log(responseData.data);
+      const data = Array.isArray(responseData.data) ? responseData.data : [];
+      return data;
       // return await authService.login(user);
     } catch (e) {
       const message = e.message;

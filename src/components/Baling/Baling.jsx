@@ -6,11 +6,19 @@ import { Link } from 'react-router-dom'
 
 export default function Baling() {
   const dispatch = useDispatch()
-  const {baleData} = useSelector(state => state.bale)
+  const {baleData,isLoading} = useSelector(state => state.bale)
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(()=>{
     dispatch(getAll())
   },[])
+
+  if(isLoading){
+    return(
+      <div class="flex justify-center items-center h-screen">
+      <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+    </div>
+    )
+  }
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };

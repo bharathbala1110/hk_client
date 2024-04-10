@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // import authService from "../../services/authService.js";
 import axios from "axios";
-import {api} from "../../services/apiService";
+import {api, setAuthToken} from "../../services/apiService";
 
 // get user from local storage
 
@@ -25,6 +25,12 @@ export const authSlice = createSlice({
       state.isError = false;
       state.message = "";
     },
+    logout:(state,action)=>{
+      state.isLoading = false;
+      state.isSuccess = true;
+      const l=localStorage.removeItem('user')
+      state.user =l;
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(login.pending,(state)=>{
@@ -35,6 +41,7 @@ export const authSlice = createSlice({
         state.isSuccess=true
         state.user=action.payload
         localStorage.setItem("user", JSON.stringify(action.payload));
+        setAuthToken()
     })
     .addCase(login.rejected,(state,action)=>{
         state.isLoading=false
@@ -48,6 +55,7 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   try {
     const responseData=await api.post('/user/login',user)
     console.log(responseData)
+    
     return responseData.data;
     // return await authService.login(user);
   } catch (e) {
@@ -56,6 +64,6 @@ export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   }
 });
 
-export const { reset } = authSlice.actions;
+export const { reset,logout } = authSlice.actions;
 
 export default authSlice.reducer;

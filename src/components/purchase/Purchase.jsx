@@ -7,17 +7,24 @@ import { getAll } from '../../features/purchase/purchaseSlice';
 
 export default function Purchase() {
   const dispatch = useDispatch();
-  const { purchaseData } = useSelector(state => state.purchase);
+  const { purchaseData,isLoading } = useSelector(state => state.purchase);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     dispatch(getAll());
   }, [dispatch]);
-
+  if(isLoading){
+    console.log("isLoading",isLoading)
+    return(
+      <div class="flex justify-center items-center h-screen">
+      <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+    </div>
+    )
+  }
   // Update to filter purchaseData based on search term, considering both supplier name and order ID
-  const filteredPurchaseData = purchaseData.filter(order => 
+  const filteredPurchaseData =purchaseData.filter(order => 
     order.supplier.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    order.display_order_id.toLowerCase().includes(searchTerm)
+    order.display_order_id.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleSearchChange = (e) => {

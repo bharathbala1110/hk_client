@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function Sale() {
   const dispatch = useDispatch()  
-  const {saleData} = useSelector(state => state.sale)
+  const {saleData,isLoading} = useSelector(state => state.sale)
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(()=>{
@@ -22,7 +22,13 @@ export default function Sale() {
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
-
+  if(isLoading){
+    return(
+      <div class="flex justify-center items-center h-screen">
+      <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+    </div>
+    )
+  }
   return (
     <div className="animate-fadeIn p-2 ">
     <div className="min-w-full">

@@ -49,7 +49,8 @@ const initialState = {
       try {
         const responseData = await api.get("/supplier");
         console.log(responseData.data);
-        return responseData.data;
+        const data = Array.isArray(responseData.data) ? responseData.data : [];
+        return data;
         // return await authService.login(user);
       } catch (e) {
         const message = e.message;

@@ -44,9 +44,13 @@ export const purchaseSlice = createSlice({
 
 export const getAll = createAsyncThunk(
   "dashboard/getAll",
-  async (user, thunkAPI) => {
+  async (data, thunkAPI) => {
     try {
-      const responseData = await api.get("/dashboard");
+      const responseData = await api.get("/dashboard",{
+        params: {
+          startDate: data.startDate,
+          endDate: data.endDate
+        }});
       console.log(responseData);
       return responseData.data;
       // return await authService.login(user);

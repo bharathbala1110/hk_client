@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Dashboard from "../../components/dashboard/Dashboard";
 import Purchase from "../../components/purchase/Purchase";
@@ -13,8 +13,18 @@ import Sale from "../../components/Sales/Sale";
 import SaleDetail from "../../components/Sales/SaleDetail";
 import SupplierDetail from "../../components/supplier/SupplierDetail";
 import BatchDetail from "../../components/batches/BatchDetail";
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate,Outlet } from 'react-router-dom'
 
 export default function Layout() {
+  const {user}= useSelector(state=>state.auth)
+  const navigate=useNavigate()
+  useEffect(()=>{
+    if(!user){
+      console.log("User is not logged in");
+      navigate('/')
+    }
+  },[user,navigate])
   return (
     <div className="flex">
       <div className="h-screen w-64 fixed top-0 left-0 bg-gray-800">
@@ -34,6 +44,7 @@ export default function Layout() {
           <Route path="/sale" element={<Sale />} />
           <Route path="/sale/:id" element={<SaleDetail />} />
         </Routes>
+        <Outlet/>
       </main>
     </div>
   );

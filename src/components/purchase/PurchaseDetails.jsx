@@ -7,21 +7,21 @@ import { getById } from "../../features/purchase/purchaseDetailSlice";
 export default function PurchaseDetails() {
   
   const dispatch = useDispatch()
-  const {purchase_order,purchase_order_details} = useSelector(state => state.purchaseDetail.purchaseDetail)
+  const {purchase_order,purchase_order_details,isLoading} = useSelector(state => state.purchaseDetail.purchaseDetail)
   let { id } = useParams();
   useEffect(()=>{
     dispatch(getById(id))
     console.log("purchase_order",purchase_order)
     console.log("purchase_order_detail",purchase_order_details)
   },[id])
-  if (!purchase_order) {
-    return <div>Loading...</div>;
+   if(isLoading || !purchase_order || !purchase_order_details){
+    return(
+      <div class="flex justify-center items-center h-screen">
+      <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+    </div>
+    )
   }
-
-  // Check if purchase_order_details is not yet loaded
-  if (!purchase_order_details) {
-    return <div>Loading...</div>;
-  }
+ 
   return (
    <>
     <div className="m-14 border-gray-400 border-2">

@@ -9,7 +9,7 @@ import { getAll } from '../../features/supplier/supplierSlice';
 export default function Supplier() {
 
   const dispatch = useDispatch()  
-  const {supplierList} = useSelector(state => state.supplier)
+  const {supplierList,isLoading} = useSelector(state => state.supplier)
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(()=>{
@@ -17,7 +17,13 @@ export default function Supplier() {
     console.log(supplierList)
     
   },[dispatch])
-
+if(isLoading){
+  return(
+    <div class="flex justify-center items-center h-screen">
+    <div class="rounded-full h-20 w-20 bg-violet-800 animate-ping"></div>
+  </div>
+  )
+}
   const filteredSupplierData = supplierList.filter(order => 
     order.supplier_name.toLowerCase().includes(searchTerm.toLowerCase()) || 
     order.supplier_id.toString().includes(searchTerm)
