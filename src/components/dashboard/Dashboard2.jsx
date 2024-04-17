@@ -208,6 +208,11 @@ const {isLoading}=useSelector((state) => state.dashboard);
                             data: [200, 300, 400, 500, 600],
                           },
                         ],
+                        
+                      }}
+                      options={{
+                        maintainAspectRatio: false, // Allows the chart to fit into the div without maintaining the aspect ratio
+                        responsive: true,           // Adjusts size to the parent container
                       }}
                     />
                   </div>
@@ -297,6 +302,10 @@ const {isLoading}=useSelector((state) => state.dashboard);
                             data: [200, 300, 400, 500, 600],
                           },
                         ],
+                      }}
+                      options={{
+                        maintainAspectRatio: false, // Allows the chart to fit into the div without maintaining the aspect ratio
+                        responsive: true,           // Adjusts size to the parent container
                       }}
                     />
                   </div>
